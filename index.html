@@ -5,6 +5,22 @@
 	<title>混淆token</title>
 </head>
 <body>
+	<div>
+		<button id="btn">生成token</button>
+	</div>
+	<script type="text/javascript" src="jsrsasign.js"></script>
 	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+			var btn = document.getElementById('btn');
+
+			btn.addEventListener('click',function(){
+				var token = new Token ({
+					phone : 15531734345
+				});
+
+				console.log(token.sJWT)
+			});
+
+	</script>
 </body>
 </html>
